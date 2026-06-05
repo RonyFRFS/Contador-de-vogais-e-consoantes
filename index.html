@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de vogais</title>
+</head>
+
+<body class="min-h-screen">
+  <!-- background -->
+  <section class="relative w-full min-h-screen overflow-hidden">
+    <div class="absolute inset-0 w-full h-full">
+      <img src="assets/fundo.svg" alt="imagem de fundo" class="w-full h-full object-cover" />
+    </div>
+
+    <!-- conteudo central -->
+    <div class="relative flex items-center justify-center w-full min-h-screen px-4">
+      <div class="w-full text-center text-white flex flex-col items-center">
+        <h1 class="font-bold text-2xl sm:text-3xl">Digite sua palavra</h1>
+
+        <p class="font-bold text-sm sm:text-base mt-3">e te direi quantas vogais e quantas consoantes há nela.</p>
+
+        <input type="text" id="textoinput"
+          class="bg-white w-full max-w-[420px] h-10 mt-6 rounded-sm text-black px-3 outline-none"
+          placeholder="Digite Aqui" />
+
+        <div class="mt-5 sm:mt-6 flex justify-center flex-col items-center gap-4 w-full">
+          <button
+            class="bg-gray-700 border-none rounded-sm w-full max-w-[180px] h-[34px] font-semibold hover:bg-gray-400 transition"
+            onclick="botaolocalizar()" id="localizar">
+            Localizar
+          </button>
+
+          <button
+            id="resetar"
+            class="bg-blue-400 border-0 font-semibold w-full max-w-[180px] h-[34px] sm:h-[30px] rounded-sm hover:bg-blue-200 transition"
+            onclick="resetar()">
+            RESETAR
+          </button>
+        </div>
+
+        <div class="mt-7 sm:mt-8 space-y-3 w-full max-w-[520px]">
+          <p class="font-bold text-lg">VOGAIS: <span id="vogais" class="font-normal">0</span></p>
+          <p class="font-bold text-lg">CONSOANTES: <span id="consoantes" class="font-normal">0</span></p>
+          <p class="font-bold text-lg">TOTAL DE LETRAS: <span id="total" class="font-normal">0</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="javascript.js"></script>
+</body>
+
+</html>
+
